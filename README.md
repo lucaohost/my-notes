@@ -12,3 +12,18 @@
   - One solution is not to shut down the computer, so I only need to enter the password the first time I boot up.
   - When locking the screen again, it can be unlocked with biometrics, and it won’t ask for the session keyring again.
   - From time to time, it is recommended to shut down the computer. I feel it starts getting a bit slow sometimes, maybe due to too much data in the cache and RAM.
+
+# DBeaver
+- FATAL: too many connections for role "my.username"
+  - It was opening a separate connection to fetch the metadata from the database, such as tables and columns.
+  - And the server was configured to allow only 1 connection per user
+  - To fix that it's necessary to unable open a second connection to download metadata. For me only worked if I changed in 2 places:
+    - Right bottom connection > Edit Connection > Metadata > Open separate Connection to Download Metadata > Never
+    - Menu > SWLEditor > Open separate Connection to download Metadata > Never
+  - The DBeaver version was 23.34
+  - Changing only in 1 place, it didn't work.
+  - ![alt text](image-1.png)
+  - ![alt text](image.png)
+
+
+
