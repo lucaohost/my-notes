@@ -1,6 +1,4 @@
-# My Notes by lucaohost
-
-## Proposal
+# Proposal
 - Document notes about my learnings and experiences;
 - Share knowledge with the community;
 - Make it easier for me to write, find, and review notes;
