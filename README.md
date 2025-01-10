@@ -26,14 +26,53 @@
   - ![alt text](image.png)
 
 ## Shell script
-```shell
-if [ -z "$my_variable" ];
-  echo "My variable is empty"
-  exit 1;
-fi
-```
-- [ -z "$commit_info" ]: This is a test command that checks if the length of the string stored in commit_info is zero (i.e., if it is empty).
-- -z: This flag checks if the string is of zero length.
-- "$my_variable": This is the variable being checked. The double quotes around the variable ensure that it is treated as a single string, even if it contains spaces or is empty.
+- -z Flag
+  ```shell
+  if [ -z "$my_variable" ];
+    echo "My variable is empty"
+    exit 1;
+  fi
+  ```
+  - [ -z "$commit_info" ]: This is a test command that checks if the length of the string stored in commit_info is zero (i.e., if it is empty).
+  - -z: This flag checks if the string is of zero length.
+  - "$my_variable": This is the variable being checked. The double quotes around the variable ensure that it is treated as a single string, even if it contains spaces or is empty.
+- Difference between exit and return
+  - In shell scripting, exit and return are used for different purposes, primarily based on the context in which they are executed:
+  - exit
+    - Purpose: Terminates the entire shell script or the current shell session.
+    - Scope: Affects the script or shell itself.
+    - Exit Code: Sets the exit status (a numerical value) for the script, which can be checked by the calling process.
+    - Use Case: Used when you want to stop the execution of the script completely, optionally returning an exit status to the parent process.
+    - Example:
+      ```bash
+      echo "This will print"
+      exit 1
+      echo "This will not print"
+      Output: This will print
+      The script ends with an exit code of 1.
+      ```
+  - return
+  - Purpose: Terminates the execution of a function within a shell script and optionally returns a status code to the calling context (inside the script).
+  - Scope: Affects only the current function and returns control back to the script.
+  - Exit Code: Sets the function's return value, which can be checked by the script using $?.
+  - Use Case: Used within functions to indicate their success or failure to the caller.
+  - Example:
+  ```bash
+    my_function() {
+        echo "Inside function"
+        return 2
+        echo "This will not print"
+    }
+    my_function
+    echo "Function returned with status $?"
+    ```
+  - Output:
+    ```
+    Inside function
+    Function returned with status 2
+    ```
+
+
+
 
 
