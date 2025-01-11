@@ -35,7 +35,7 @@
   - -z: This flag checks if the string is of zero length.
   - "$my_variable": This is the variable being checked. The double quotes around the variable ensure that it is treated as a single string, even if it contains spaces or is empty.
 - Difference between exit and return
-  - In shell scripting, exit and return are used for different purposes, primarily based on the context in which they are executed:
+  - Both will stop the execution of script below, but exit will close the terminal too and return not.
   - exit
     - Purpose: Terminates the entire shell script or the current shell session.
     - Scope: Affects the script or shell itself.
@@ -69,8 +69,3 @@
     Inside function
     Function returned with status 2
     ```
-
-
-
-
-
