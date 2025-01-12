@@ -137,10 +137,34 @@
     Inside function
     Function returned with status 2
     ```
-
 ## Prompts
 - To install tools:
   - Turn on the internet search
   - Search for the most current and recommended way to install $your_tool on ubuntu according to the official documentation
     - This prompt avoid using old intallations way, which can cause troubles after.
     - You always can go to the official documentation, which is the recomended ... 
+## English Notes for Brazilians
+- Quando usar may, should, could e suas diferenças:
+    - **May**: Permissão ou possibilidade. Ex.: *It may rain later.*  
+    - **Should**: Conselho ou expectativa. Ex.: *You should eat healthier.*  
+    - **Could**: Possibilidade, habilidade passada ou pedido educado. Ex.: *Could you help me?*
+- O que significa numb?
+    - "entorpecer", "anestesiar" ou "amortecer", dependendo do contexto.
+        - Entorpecer
+            - produzir torpor em (alguém ou a si mesmo); estar ou ficar em estado de torpor.
+                - sentimento de mal-estar caracterizado pela diminuição da sensibilidade e do movimento; entorpecimento, estupor, insensibilidade.
+                - indiferença ou apatia moral; indolência, prostração.
+    - Pode singifica "indiferença" também, como na música do Linkin Park
+        - "I've become so numb, I can't feel you there"
+        - Become so tired, so much more aware
+            - aware é consciente
+            - self-awareness
+                - autoconsciência
+                - your ability to perceive and understand the things that make you who you are as an individual, including your personality, actions, values, beliefs, emotions, and thoughts  
+    - Físico: "My fingers are numb from the cold."
+        - (Meus dedos estão dormentes por causa do frio.)
+    - Emocional: "She felt numb after the bad news."
+        - (Ela se sentiu entorpecida após a má notícia.)
+    - Time may numb the pain.
+        - O tempo pode diminuir a dor
+            - Diminuir no sentido de amortecer  
