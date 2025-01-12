@@ -69,3 +69,10 @@
     Inside function
     Function returned with status 2
     ```
+
+## Prompts
+- To install tools:
+  - Turn on the internet search
+  - Search for the most current and recommended way to install $your_tool on ubuntu according to the official documentation
+    - This prompt avoid using old intallations way, which can cause troubles after.
+    - You always can go to the official documentation, which is the recomended ... 
