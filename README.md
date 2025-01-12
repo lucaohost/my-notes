@@ -4,6 +4,74 @@
 - Make it easier for me to write, find, and review notes;
 - Bit by bit, I'll translate and add old notes that I have kept in my Google Docs since September 2017.
 
+# Python
+- Identation rules which code is inside a function, for example.
+- Function
+    ```python
+    def myFunction:
+      print("Hello World!")
+    ```
+  - Not necessary open or close curly braces.
+  - Not necessary use semicolon in the end of line
+  - Necessary the keyword `def` to define a function 
+  - Necessary the `two dots` after function name
+- For
+  ```python
+  for num in nums:
+        print(num)
+  ```
+  - Similar to `for in` of javascript
+  - But there is no `for of` to iterate indexes
+  - To do it, it's necessary range(len(my_array)) or enumerate()
+    - Use enumerate() if you need both index and value.
+    - Use range(len(array)) only if you need the index and not the value.
+    - The performance difference is almost nothing.
+  - len()
+    - returns the array size
+    - it's a function and you need to pass the array as parameter
+      - len(my_array)
+    - In javascript was different, because it's a property from Array type
+      - myArray.length
+  - range()
+    - function generates a sequence of numbers and is commonly used in loops.
+    - range(start, stop, step)
+      - start: Starting number (default: 0).
+      - stop: Ending number (exclusive, required).
+      - step: Increment or decrement (default: 1).
+      - It’s memory-efficient because it doesn’t create a list unless explicitly converted with list(range(...))
+  - enumerate()
+    - The enumerate() function in Python allows you to iterate over an iterable and get both the index and the value of each element.
+    - enumerate(iterable, start=0)
+    - iterable: The sequence to iterate over.
+    - start: The starting index (default is 0).
+    ```python
+    my_list = ['a', 'b', 'c']
+    for index, value in enumerate(my_list):
+    print(f"Index: {index}, Value: {value}")
+    ```
+- Naming functions and array?
+  - Python naming conventions (PEP 8):
+    - Variables/Functions: snake_case
+    - Classes: PascalCase
+    - Constants: UPPERCASE
+    - Private variables/methods: _single_underscore, __double_underscore
+    - Modules/Packages: lowercase_with_underscores
+    - Magic methods: __method_name__
+      - Example: __init__(), __str__()
+- print()
+  - It's a function similar to System.out.println() from Java
+  - It's a function, remember to use parenthesis
+- Traverse dictionary?
+  ```python
+  for key in my_dict:
+    print(key)
+
+  for value in my_dict.values():
+    print(value)
+
+  for key, value in my_dict.items():
+    print(key, value)
+  ```
 ## Ubuntu
 - Issue with session keyring on Ubuntu using biometrics
   - Without using a password, I used biometrics, and then it asked for a password to unlock the session keyring, which is annoying.
