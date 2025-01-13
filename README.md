@@ -4,7 +4,15 @@
 - Make it easier for me to write, find, and review notes;
 - Bit by bit, I'll translate and add old notes that I have kept in my Google Docs since September 2017.
 
-# Python
+## Git
+- Difference git config --local --global --system and no flag.
+  - **`git config --system`**: Configures Git **system-wide** for all users on the computer. Requires admin/root access. Stores settings in `/etc/gitconfig`.
+  - **`git config --global`**: Configures Git **globally** for the current user. No special permissions needed. Stores settings in `~/.gitconfig`.
+  - Precedence: Local (--local) > Global (--global) > System (--system).
+  - Without flag means global
+  - **Precedence**: Local (`--local`) > Global (`--global`) > System (`--system`).
+
+## Python
 - Identation rules which code is inside a function, for example.
 - Function
     ```python
