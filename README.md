@@ -7,13 +7,18 @@
 ## Nest
 - HTTPCode decorator and Httpstatus Enum
   - Instead of using
-    ```javascript
+    ```js
       @ApiResponse({ status: 204 })
     ```
   - Use
-    ```javascript
-       @HttpCode(HttpStatus.NO_CONTENT)
+    ```js
+       @ApiNoContentResponse()
     ```
+  - Why not use:
+    ```js
+    @HttpCode(HttpStatus.NO_CONTENT)
+    ```
+  - A method decorated with @Get, @Post etc. should specify the expected ApiResponse e.g. @ApiOkResponse(type: MyType). These decorators are in the @nestjs/swagger npm package.eslint@darraghor/nestjs-typed/api-method-should-specify-api-response
 ## Git
 - Difference git config --local --global --system and no flag.
   - **`git config --system`**: Configures Git **system-wide** for all users on the computer. Requires admin/root access. Stores settings in `/etc/gitconfig`.
