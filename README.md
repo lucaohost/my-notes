@@ -4,6 +4,16 @@
 - Make it easier for me to write, find, and review notes;
 - Bit by bit, I'll translate and add old notes that I have kept in my Google Docs since September 2017.
 
+## Nest
+- HTTPCode decorator and Httpstatus Enum
+  - Instead of using
+    ```javascript
+      @ApiResponse({ status: 204 })
+    ```
+  - Use
+    ```javascript
+       @HttpCode(HttpStatus.NO_CONTENT)
+    ```
 ## Git
 - Difference git config --local --global --system and no flag.
   - **`git config --system`**: Configures Git **system-wide** for all users on the computer. Requires admin/root access. Stores settings in `/etc/gitconfig`.
