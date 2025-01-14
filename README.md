@@ -151,6 +151,21 @@
   - Search for the most current and recommended way to install $your_tool on ubuntu according to the official documentation
     - This prompt avoid using old intallations way, which can cause troubles after.
     - You always can go to the official documentation, which is the recomended ... 
+## HTTP
+  - **Body**: The entire content sent in a message, such as an HTTP request.  
+  - **Payload**: Only the useful and relevant data within the body that will be processed by the application.
+  - **Example**: The body includes metadata and data, while the payload is just the useful content (the data).
+  ```json
+  {
+    "metadata": {
+      "timestamp": "2025-01-14T10:00:00Z"
+    },
+    "data": {
+      "name": "Lucas",
+      "email": "lucas@example.com"
+    }
+  }
+  ```
 ## English Notes for Brazilians
 - Quando usar may, should, could e suas diferenças:
     - **May**: Permissão ou possibilidade. Ex.: *It may rain later.*  
