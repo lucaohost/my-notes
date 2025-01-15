@@ -4,6 +4,58 @@
 - Make it easier for me to write, find, and review notes;
 - Bit by bit, I'll translate and add old notes that I have kept in my Google Docs since September 2017.
 
+## PostgreSQL
+- PostgreSQL Data Types for Numbers
+  - Integer Types
+    - **`smallint`**
+      - Stores small integers.
+      - Range: -32,768 to 32,767.
+    - **`integer` (or `int`)**
+      - Default integer type.
+      - Range: -2,147,483,648 to 2,147,483,647.
+    - **`bigint`**
+      - Stores large integers.
+      - Range: -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.
+  - Serial Types
+    - **`smallserial`**
+      - Auto-incrementing small integers.
+      - Range: 1 to 32,767.
+    - **`serial`**
+      - Auto-incrementing standard integers.
+      - Range: 1 to 2,147,483,647.
+    - **`bigserial`**
+      - Auto-incrementing large integers.
+      - Range: 1 to 9,223,372,036,854,775,807.
+  - Floating-Point Types
+    - **`real`**
+      - Single-precision floating-point number.
+      - Approximate range: 6 decimal digits.
+    - **`double precision`**
+      - Double-precision floating-point number.
+      - Approximate range: 15 decimal digits.
+  - Numeric Types
+    - **`numeric` (or `decimal`)**
+      - Exact precision and scale.
+      - Use for precise calculations, such as financial data.
+
+## Programming
+- Difference Between `float` and `double`
+  - Precision
+    - **`float`**: Single precision, accurate up to 7 significant digits.
+    - **`double`**: Double precision, accurate up to 15-16 significant digits.
+  - Memory Size
+    - **`float`**: Occupies 4 bytes (32 bits).
+    - **`double`**: Occupies 8 bytes (64 bits).
+  - Value Range
+    - **`float`**: ±1.5 × 10⁻⁴⁵ to ±3.4 × 10³⁸.
+    - **`double`**: ±5.0 × 10⁻³²⁴ to ±1.7 × 10³⁰⁸.
+  - Performance
+    - **`float`**: Faster and consumes less memory, suitable for resource-constrained environments.
+    - **`double`**: Slower but more precise, ideal for high-accuracy calculations.
+  - Usage Scenarios
+    - **`float`**: Use for applications where memory and speed are more critical than precision (e.g., graphics, embedded systems).
+    - **`double`**: Use for applications requiring high precision (e.g., scientific or financial computations).
+
 ## Nest
 - HTTPCode decorator and Httpstatus Enum
   - Instead of using
