@@ -72,6 +72,10 @@
     ```
   - A method decorated with @Get, @Post etc. should specify the expected ApiResponse e.g. @ApiOkResponse(type: MyType). These decorators are in the @nestjs/swagger npm package.eslint@darraghor/nestjs-typed/api-method-should-specify-api-response
 ## Git
+- Which commit message pattern is correct?
+  - `fix: Header on LDL Pause/Resume request`
+  - `fix: Fix Header on LDL Pause/Resume request`
+  - The first one, it's concise and avoids redundancy.
 - Difference git config --local --global --system and no flag.
   - **`git config --system`**: Configures Git **system-wide** for all users on the computer. Requires admin/root access. Stores settings in `/etc/gitconfig`.
   - **`git config --global`**: Configures Git **globally** for the current user. No special permissions needed. Stores settings in `~/.gitconfig`.
