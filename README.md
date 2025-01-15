@@ -1,7 +1,7 @@
 # Proposal
 - Document notes about my learnings and experiences;
 - Share knowledge with the community;
-- Make it easier for me to write, find, and review notes;
+- Make it easier for me to write, find, and review notes; 
 - Bit by bit, I'll translate and add old notes that I have kept in my Google Docs since September 2017.
 
 ## PostgreSQL
@@ -234,6 +234,11 @@
   }
   ```
 ## English Notes for Brazilians
+- Afim de
+  - `In order to`
+    - I studied hard in order to pass the exam.
+  - Normalmente pode ser substituído por `to`, porém fica mais com menos ênfase e mais casual
+    - I studied hard to pass the exam.
 - Quando usar may, should, could e suas diferenças:
     - **May**: Permissão ou possibilidade. Ex.: *It may rain later.*  
     - **Should**: Conselho ou expectativa. Ex.: *You should eat healthier.*  
