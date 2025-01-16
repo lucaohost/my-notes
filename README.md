@@ -4,7 +4,7 @@
 - Make it easier for me to write, find, and review notes; 
 - Bit by bit, I'll translate and add old notes that I have kept in my Google Docs since September 2017.
 
-## PostgreSQL
+# PostgreSQL
 - PostgreSQL Data Types for Numbers
   - Integer Types
     - **`smallint`**
@@ -38,7 +38,7 @@
       - Exact precision and scale.
       - Use for precise calculations, such as financial data.
 
-## Programming
+# Programming
 - Difference Between `float` and `double`
   - Precision
     - **`float`**: Single precision, accurate up to 7 significant digits.
@@ -56,7 +56,7 @@
     - **`float`**: Use for applications where memory and speed are more critical than precision (e.g., graphics, embedded systems).
     - **`double`**: Use for applications requiring high precision (e.g., scientific or financial computations).
 
-## Nest
+# Nest
 - HTTPCode decorator and Httpstatus Enum
   - Instead of using
     ```js
@@ -71,7 +71,7 @@
     @HttpCode(HttpStatus.NO_CONTENT)
     ```
   - A method decorated with @Get, @Post etc. should specify the expected ApiResponse e.g. @ApiOkResponse(type: MyType). These decorators are in the @nestjs/swagger npm package.eslint@darraghor/nestjs-typed/api-method-should-specify-api-response
-## Git
+# Git
 - Which commit message pattern is correct?
   - `fix: Header on LDL Pause/Resume request`
   - `fix: Fix Header on LDL Pause/Resume request`
@@ -83,7 +83,7 @@
   - Without flag means global
   - **Precedence**: Local (`--local`) > Global (`--global`) > System (`--system`).
 
-## Python
+# Python
 - Identation rules which code is inside a function, for example.
 - Function
     ```python
@@ -151,14 +151,14 @@
   for key, value in my_dict.items():
     print(key, value)
   ```
-## Ubuntu
+# Ubuntu
 - Issue with session keyring on Ubuntu using biometrics
   - Without using a password, I used biometrics, and then it asked for a password to unlock the session keyring, which is annoying.
   - One solution is not to shut down the computer, so I only need to enter the password the first time I boot up.
   - When locking the screen again, it can be unlocked with biometrics, and it won’t ask for the session keyring again.
   - From time to time, it is recommended to shut down the computer. I feel it starts getting a bit slow sometimes, maybe due to too much data in the cache and RAM.
 
-## DBeaver
+# DBeaver
 - FATAL: too many connections for role "my.username"
   - It was opening a separate connection to fetch the metadata from the database, such as tables and columns.
   - And the server was configured to allow only 1 connection per user
@@ -170,7 +170,7 @@
   - ![alt text](image-1.png)
   - ![alt text](image.png)
 
-## Shell script
+# Shell script
 - -z Flag
   ```shell
   if [ -z "$my_variable" ];
@@ -216,13 +216,13 @@
     Inside function
     Function returned with status 2
     ```
-## Prompts
+# Prompts
 - To install tools:
   - Turn on the internet search
   - Search for the most current and recommended way to install $your_tool on ubuntu according to the official documentation
     - This prompt avoid using old intallations way, which can cause troubles after.
     - You always can go to the official documentation, which is the recomended ... 
-## HTTP
+# HTTP
   - **Body**: The entire content sent in a message, such as an HTTP request.  
   - **Payload**: Only the useful and relevant data within the body that will be processed by the application.
   - **Example**: The body includes metadata and data, while the payload is just the useful content (the data).
@@ -237,11 +237,11 @@
     }
   }
   ```
-## English Notes for Brazilians
+# English Notes for Brazilians
 - Afim de
   - `In order to`
     - I studied hard in order to pass the exam.
-  - Normalmente pode ser substituído por `to`, porém fica mais com menos ênfase e mais casual
+  - Normalmente pode ser substituído por `to`, porém fica com menos ênfase e mais casual
     - I studied hard to pass the exam.
 - Quando usar may, should, could e suas diferenças:
     - **May**: Permissão ou possibilidade. Ex.: *It may rain later.*  
