@@ -171,9 +171,20 @@
   - ![alt text](image.png)
 
 # Shell script
+- If statement
+  - Following the example below
+  - You don't open with a curly braces
+    - you open with semicolon + then
+  - The syntax is very different from modern languages
+  - The parenthesis is replaced by brackets
+  - It's necessary finalize the first line of if statement with
+    - semicolon
+    - then
+  - You don't close with curly braces
+    - You close with fi
 - -z Flag
   ```shell
-  if [ -z "$my_variable" ];
+  if [ -z "$my_variable" ]; then
     echo "My variable is empty"
     exit 1;
   fi
