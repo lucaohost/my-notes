@@ -89,6 +89,68 @@
   - **Precedence**: Local (`--local`) > Global (`--global`) > System (`--system`).
 
 # Python
+- Setting up environment
+  - First install venv, to create a exclusive virtual environment for yout project
+    - Doing that, we avoid conflict on multiple libs and versions
+  - Go to your project folder
+  - To create the virtual environment
+    - python3 -m venv your_project_name
+  - To activate the virtual environment
+    - source your_project_name/bin/activate
+  - Install the libs you want, for example:
+    - pip install pyautogui
+  - Verifiy the libs installation
+    - pip show pyautogui
+  - Deactivate virtual environment
+    - deactivate
+  - To create a dependencies file
+    - pip freeze > requirements.txt
+  - Create a .gitignore to not commit dependencies
+    ```
+    # Ignore virtual environment directory
+    your_project_name/
+
+    # Python bytecode files
+    *.pyc
+
+    # IDE settings (for Visual Studio Code, for example)
+    .vscode/
+    ```
+  - Commit all on git
+  - Next time someone clone your project, the'll need to do:
+    - Activate Virtual Environment
+        - source your_project_name/bin/activate
+        - Install dependencies (only first time)
+            - pip install -r requirements.txt
+            - Verifiy the instalation
+                - pip list
+    - Run
+        - python main_project_name.py
+- pyautogui
+  - Python Library to do actions like cliking and typing
+  - Getting coordinates to click
+    ```python
+    import pyautogui
+    import time
+
+    try:
+        while True:
+            x, y = pyautogui.position()
+            print(f"Mouse position: (x:{x}, y:{y})")
+            time.sleep(1)
+            print("Press Ctrl+C to stop.")
+    except KeyboardInterrupt:
+        print("\nTracking stopped.")
+    ```
+  - Mouse click
+    - pyautogui.click(x=x1, y=y1)
+- Sleep
+  ```python
+  import time
+  time.sleep(5)
+  ```
+  - The parameter is in seconds
+  - Usually on another modern languages the time is in milliseconds
 - Identation rules which code is inside a function, for example.
 - Function
     ```python
@@ -273,6 +335,10 @@
   ```
 
 # English Notes for Brazilians
+- Milissegundos
+  - milliseconds
+    - A common brazilian mistake is write this word with only one L
+  - Sim em português é com dois S, se não o som seria milizegundos
 - Objetivamente
   - A forma de correta de escrever e `objectively`
   - Tava com dificuldade de escrever essa palavra, tentava algo como `objectvly`
