@@ -218,6 +218,52 @@
   for key, value in my_dict.items():
     print(key, value)
   ```
+- Queue
+  - Use queue.Queue() for multithreading.
+  ```python
+  import queue
+  q = queue.Queue()  # Create a queue
+  q.put(1)  # Add elements
+  q.put(2)
+  q.put(3)
+  print(q.get())  # Remove and return the first element (FIFO)
+  print(q.get())
+  print(q.get())
+  print(q.empty())  # Check if the queue is empty
+  ```
+  - Use collections.deque() for fast performance in single-threaded applications.
+  ```python
+  from collections import deque
+  q = deque()  # Create a queue
+  q.append(1)  # Add elements
+  q.append(2)
+  q.append(3)
+  print(q.popleft())  # Remove and return the first element (FIFO)
+  print(q.popleft())
+  print(q.popleft())
+  print(len(q) == 0)  # Check if the queue is empty
+  ```
+  - Avoid using lists unless you have very small data.
+  ```python
+  q = []
+  q.append(1)  # Add elements
+  q.append(2)
+  q.append(3)
+  print(q.pop(0))  # Remove the first element (FIFO)
+  print(q.pop(0))
+  print(q.pop(0))
+  print(len(q) == 0)  # Check if the queue is empty
+  ```
+- Increment Operator
+  - In Python, the ++ (increment operator) from languages like C++ or Java does not exist. Instead, you need to use += 1.
+  ```python
+  sum = 0
+  sum += 1  # Equivalent to sum++
+  sum += 1  # Increment again
+
+  print(sum)  # Output: 2
+  ```
+  
 # Ubuntu
 - Issue with session keyring on Ubuntu using biometrics
   - Without using a password, I used biometrics, and then it asked for a password to unlock the session keyring, which is annoying.
