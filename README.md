@@ -264,12 +264,85 @@
   print(sum)  # Output: 2
   ```
   
-# Ubuntu
+# Linux / Ubuntu
 - Issue with session keyring on Ubuntu using biometrics
   - Without using a password, I used biometrics, and then it asked for a password to unlock the session keyring, which is annoying.
   - One solution is not to shut down the computer, so I only need to enter the password the first time I boot up.
   - When locking the screen again, it can be unlocked with biometrics, and it won’t ask for the session keyring again.
   - From time to time, it is recommended to shut down the computer. I feel it starts getting a bit slow sometimes, maybe due to too much data in the cache and RAM.
+- What means the command pwd?
+  - The pwd command in Linux stands for Print Working Directory. It displays the full absolute path of the current directory you are in.
+- What is the environment variable `$HOME`?
+  - In Ubuntu (and other Linux distributions), `$HOME` is an environment variable that represents the home directory of the currently logged-in user.
+  - If your username is lucas, then your home directory is typically:
+  - `/home/lucas`
+  - When you use `$HOME`, it expands to this path:
+  ```shellscript
+    $ echo $HOME
+    /home/lucas
+  ```
+  - Why is $HOME useful?
+    - It provides a shortcut to access your home directory.
+    - Many programs use it to store configuration files (e.g., .bashrc, .ssh/, .config/).
+    - You can use it in scripts to refer to your home directory dynamically.
+- What is `~` in Linux?
+  - In Linux, ~ (tilde) is a shorthand for the home directory of the currently logged-in user. It works similarly to $HOME.
+  ```bash
+    echo ~
+    /home/lucas
+  ```
+- What's the Difference Between `sudo` and `root` in Linux?
+  - `root`  
+    - The **root user** is the **superuser** in Linux.  
+      - Has **full control** over the system.  
+      - Can modify, delete, or access any file.  
+      - Can manage users, permissions, and install/remove software.  
+  -  `sudo`  
+    - `sudo` (**Superuser Do**) allows a regular user to execute commands as **root**.  
+      - Temporarily grants **admin privileges** to a user.  
+      - Requires authentication (usually the user's password).  
+      - Uses `/etc/sudoers` to define which users can run which commands.  
+
+  - Key Differences  
+    | Feature   | `root` | `sudo` |
+    |-----------|--------|--------|
+    | Access Level | Full system control | Temporary elevated privileges |
+    | Authentication | Direct login (or `su` command) | Requires password (configurable) |
+    | Security | High risk (permanent superuser) | More secure (temporary access) |
+    | Usage | Used for administrative tasks | Recommended for safe privilege escalation |
+  - Example Commands  
+    - **Switch to root user:**  
+      ```bash
+      su -
+      ```
+    - **Run a command as root using sudo:**  
+      ```bash
+      sudo apt update
+      ```
+- What is `top` Command in Linux?
+  - The `top` command is a system monitoring tool that displays real-time information about system processes, CPU usage, memory usage, and more. It provides an overview of system performance and resource consumption.
+  - Key Information Displayed by `top`
+    1. **System Uptime** – How long the system has been running.
+    2. **Load Average** – The average system load over the last 1, 5, and 15 minutes.
+    3. **CPU Usage** – The percentage of CPU time used by user processes, system processes, and idle time.
+    4. **Memory Usage** – Total, used, and available RAM and swap space.
+    5. **Processes List** – A dynamic list of running processes, showing details like:
+      - **PID** (Process ID)
+      - **User** running the process
+      - **CPU and Memory usage**
+      - **Command** that started the process
+  - Useful Commands Inside `top`
+    - Press `q` → Quit `top`
+    - Press `k` → Kill a process (you’ll need to enter the PID)
+    - Press `M` → Sort processes by **memory usage**
+    - Press `P` → Sort processes by **CPU usage**
+  - For an alternative with a more user-friendly interface, you can use `htop`
+  - The top command in Linux is called "top" because it displays the top (most resource-intensive) processes running on the system.
+  - When you run top, it continuously updates and shows the most CPU- and memory-consuming processes at the top of the list by default. The name reflects its primary function: monitoring the top processes affecting system performance.
+- How filter `top` by memory usage
+  - Run `top`
+  - Once you're on top table
+  - Press Shift + M (uppercase M) to sort processes by memory usage.
 
 # DBeaver
 - FATAL: too many connections for role "my.username"
