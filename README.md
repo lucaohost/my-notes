@@ -520,3 +520,21 @@ Which sentence is correct and why?
 - ![alt text](image-2.png)
 - The author suggests that teams define working agreements to determine an acceptable level of risk and use visual tools, such as the risk matrix, to monitor and plan tasks more effectively.  
 - ([agilemomentum.wordpress.com](https://agilemomentum.wordpress.com/2018/02/18/esforco-e-complexidade-quando-tamanho-realmente-importa/?utm_source=chatgpt.com))  
+
+# VS Code
+- Search using Regular Expressions
+  - ![alt text](image-4.png)
+  - `#.*Ubuntu`
+    - In this case I'm filtering lines started with `#`
+      - In Markdown, `#` it's used for Titles
+    - `.*`
+      - This is a regular expression
+      - `.` whatever character
+      - `*` one or many times
+    - Word Ubuntu
+  - So in this search, I'm filtering lines 
+    - started with `#`
+    - With whataver characters many times
+    - Finishing with the word `Ubuntu`
+  - If I tried searching for `# Ubuntu`, I'll find nothing, because the line is
+    - `# Linux / Ubuntu`
