@@ -475,10 +475,11 @@ Which sentence is correct and why?
     - I studied hard in order to pass the exam.
   - Normalmente pode ser substituído por `to`, porém fica com menos ênfase e mais casual
     - I studied hard to pass the exam.
-- Quando usar may, should, could e suas diferenças:
+- Quando usar **may, should, could e must** e suas diferenças:  
     - **May**: Permissão ou possibilidade. Ex.: *It may rain later.*  
     - **Should**: Conselho ou expectativa. Ex.: *You should eat healthier.*  
-    - **Could**: Possibilidade, habilidade passada ou pedido educado. Ex.: *Could you help me?*
+    - **Could**: Possibilidade, habilidade passada ou pedido educado. Ex.: *Could you help me?*  
+    - **Must**: Obrigação ou alta certeza. Ex.: *You must wear a seatbelt.* / *He must be at home.*
 - O que significa numb?
     - "entorpecer", "anestesiar" ou "amortecer", dependendo do contexto.
         - Entorpecer
