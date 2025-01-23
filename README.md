@@ -454,6 +454,14 @@
   ```
 
 # English Notes for Brazilians
+Which sentence is correct and why?  
+  - **"My conclusion was that the log had been deleted."**  
+  - **"My conclusion was that the log has been deleted."**  
+  - ✅ **"My conclusion was that the log had been deleted."** → Correct because *past perfect* (*had been deleted*) indicates the deletion happened before the past conclusion.  
+  - ❌ **"My conclusion was that the log has been deleted."** → Incorrect because it mixes past ("My conclusion was") with *present perfect* ("has been deleted"), creating a temporal inconsistency.  
+  - 💡 If the conclusion is still valid in the present, use:  
+    - 👉 **"My conclusion is that the log has been deleted."**  
+
 - Milissegundos
   - milliseconds
     - A common brazilian mistake is write this word with only one L
