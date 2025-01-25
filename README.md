@@ -454,6 +454,17 @@
   ```
 
 # English Notes for Brazilians
+- Difference of meaning and sound, for throught and similar words:
+
+| Palavra     | Som Aproximado | Significado |
+|------------|---------------|-------------|
+| **THROUGH** | *THRU* (*drive-thru*) | Através de algo |
+| **THROUGHOUT** | *thru-ÁUT* (rima com *knock-out*) | Durante todo / Por toda parte |
+| **THOROUGH** | *THÂ-RÔU* (*sarro* com *th*) | Completo, detalhado |
+| **THOUGHT** | *THÓT* (*robot*) | Pensamento / Pensou |
+| **THOUGH** | *DÔU* (*dou* com *th*) | Embora / Porém |
+| **TOUGH** | *TÂF* (*stuff*) | Difícil / Resistente |
+
 Which sentence is correct and why?  
   - **"My conclusion was that the log had been deleted."**  
   - **"My conclusion was that the log has been deleted."**  
