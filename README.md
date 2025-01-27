@@ -440,23 +440,36 @@
   - resuma todas as perguntas e respostas em inglês e formate em markdown em tópicos utilizando `-`.
   - summarize all questions and answers in English and format in markdown in topics using `-`.
 
-# HTTP
-  - **Body**: The entire content sent in a message, such as an HTTP request.  
-  - **Payload**: Only the useful and relevant data within the body that will be processed by the application.
-  - **Example**: The body includes metadata and data, while the payload is just the useful content (the data).
-  ```json
-  {
-    "metadata": {
-      "timestamp": "2025-01-14T10:00:00Z"
-    },
-    "data": {
-      "name": "Lucas",
-      "email": "lucas@example.com"
+
+# Web Development
+  - Which protocol rest and graphql use?
+    - Both **REST** and **GraphQL** use **HTTP (Hypertext Transfer Protocol)** as their underlying protocol for communication between clients and servers.  
+    - **REST** typically follows standard HTTP methods like `GET`, `POST`, `PUT`, `DELETE`, and `PATCH` to perform CRUD (Create, Read, Update, Delete) operations. It relies on URLs to represent resources and uses headers and status codes for communication.  
+    - **GraphQL**, on the other hand, usually uses HTTP `POST` requests (though `GET` can be used for queries) to send a structured query to a single endpoint, allowing clients to request exactly the data they need.  
+    - Both can also be used over **WebSockets** for real-time updates, but HTTP remains the primary transport protocol.
+  - 
+  -  HTTP
+    - **Body**: The entire content sent in a message, such as an HTTP request.  
+    - **Payload**: Only the useful and relevant data within the body that will be processed by the application.
+    - **Example**: The body includes metadata and data, while the payload is just the useful content (the data).
+    ```json
+    {
+      "metadata": {
+        "timestamp": "2025-01-14T10:00:00Z"
+      },
+      "data": {
+        "name": "Lucas",
+        "email": "lucas@example.com"
+      }
     }
-  }
-  ```
+    ```
 
 # English Notes for Brazilians
+- Verbo pertencer
+  - Which topic of software development this questions belongs.
+    - `Belongs` o verbo `Pertencer`
+  - A pergunta certa seria com `what` ou `which`?
+    - "Which" é mais adequado quando você está selecionando de um conjunto determinado, enquanto "what" seria mais aberto e genérico.
 - Difference of meaning and sound, for throught and similar words:
 
 | Palavra     | Som Aproximado | Significado |
