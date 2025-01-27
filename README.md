@@ -435,7 +435,10 @@
   - Turn on the internet search
   - Search for the most current and recommended way to install $your_tool on ubuntu according to the official documentation
     - This prompt avoid using old intallations way, which can cause troubles after.
-    - You always can go to the official documentation, which is the recomended ... 
+    - You always can go to the official documentation, which is the recomended ...
+- To summarize and format notes in GPT chats
+  - resuma todas as perguntas e respostas em inglês e formate em markdown em tópicos utilizando `-`.
+  - summarize all questions and answers in English and format in markdown in topics using `-`.
 
 # HTTP
   - **Body**: The entire content sent in a message, such as an HTTP request.  
@@ -592,4 +595,44 @@ Which sentence is correct and why?
   - **Privacy**: To hide the real MAC address from networks or tracking systems.
   - **Network Troubleshooting**: To bypass MAC address filters or resolve network issues.
   - **Security**: To avoid tracking or limit the ability of certain services to link devices through their MAC address.
-  - While spoofing a MAC address is possible, it's important to note that it doesn't affect the physical hardware or the actual factory-assigned MAC address. The new address is only temporary and used for the duration of the network session or until the device is reset.   
+  - While spoofing a MAC address is possible, it's important to note that it doesn't affect the physical hardware or the actual factory-assigned MAC address. The new address is only temporary and used for the duration of the network session or until the device is reset.
+
+  # Java / Kotlin
+- **The compiler obligate to treat `RuntimeException`?**  
+  - Unlike checked exceptions, the compiler does not require handling it.  
+- **If a checked exception occurs and is not caught, does execution stop?**  
+  - Yes, if a checked exception is not caught, the program stops.  
+  - If not handled with `try-catch` or declared with `throws`, the code won't even compile.  
+- **If a `RuntimeException` occurs, does execution continue to the next line?**  
+  - No, execution stops immediately if a `RuntimeException` is not caught.  
+  - The exception propagates up the call stack and can terminate the program.  
+- **If a `NullPointerException` occurs, does execution stop?**  
+  - Yes, `NullPointerException` is a `RuntimeException` and will halt execution if not caught.  
+  - Any code after the exception won't execute unless handled with `try-catch`.  
+- **If `RuntimeException` also stops execution, why is its handling not mandatory?**  
+  - `RuntimeException` represents programming errors that should be **prevented**, not necessarily handled.  
+  - Mandatory handling would clutter the code and hide bugs.  
+  - Instead of catching `NullPointerException`, it's better to ensure the object is initialized before use.  
+  - Catching `RuntimeException` is useful for logging errors or preventing application crashes.
+- **How to write null-safe code in Java?**  
+  - **Use `Objects.requireNonNull`** to validate parameters.  
+  - **Check for `null` before accessing objects** (or use `Optional`).  
+  - **Prefer `Optional` over returning `null`** to avoid explicit checks.  
+  - **Initialize variables properly** to avoid uninitialized fields.
+    ```java
+    private List<String> names = new ArrayList<>(); // Avoids null
+    ```
+  - **Use annotations like `@NonNull`** (from Lombok or Spring).  
+  - **Return empty collections instead of `null`** to prevent unnecessary null checks.  
+  - **Use safe chaining with `Optional`** to avoid deep nested null checks.
+    - Instead of:
+    ```java
+      String country = user != null && user.getAddress() != null ? user.getAddress().getCountry() : "Unknown";
+    ```
+    - Use Optional:
+    ```java
+    String country = Optional.ofNullable(user)
+    .map(User::getAddress)
+    .map(Address::getCountry)
+    .orElse("Unknown");
+    ```
