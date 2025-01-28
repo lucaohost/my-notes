@@ -649,3 +649,49 @@ Which sentence is correct and why?
     .map(Address::getCountry)
     .orElse("Unknown");
     ```
+
+# Kafka
+- **What is Kafka?**
+  - Apache Kafka is a distributed streaming platform designed to handle large volumes of real-time data.
+  - It is widely used for building data pipelines, messaging systems, and real-time analytics applications.
+  - Originally developed by LinkedIn, Kafka is now maintained by the Apache Software Foundation.
+
+- **Benefits of Kafka:**
+  - Decouples consumers and producers, enhancing flexibility in communication.
+  - Improves performance by reducing CPU and RAM spikes.
+  - Guarantees request processing.
+  - If a service is unavailable, messages remain in Kafka and can be consumed once the service is back online.
+  - Microservices architecture reduces the learning curve and makes project updates easier.
+  - Easier to update the project, such as fixing vulnerable libraries.
+  - Using messaging services like Kafka reduces project coupling.
+  - Communication is asynchronous, so we don’t need to wait for responses, removing blocking times and allowing more requests to be processed per second.
+
+- Concepts
+  - Here’s the continuation of the summarized version in markdown with bullet points:
+  - **Producers**
+    - Produce messages in Kafka.
+  - **Consumers**
+    - Consume messages, which are written to topics.
+  - **Topics**
+    - Contain messages and are divided into partitions.
+  - **Clusters**
+    - Composed of brokers and nodes.
+  - **Brokers**
+    - Kafka servers responsible for storing and distributing messages.
+  - **Nodes**
+    - Individual Kafka servers in a cluster.
+  - **Messages**
+    - Default expiration is 7 days, but this can be configured.
+    - Messages can be located using two data points.
+  - **Partition**
+    - A division within a topic where messages are stored.
+    - Offsets represent the position of messages within a partition.
+    - A message can be replicated across multiple partitions, allowing multiple consumers to process them simultaneously, increasing throughput.
+  - **Throughput**
+    - The amount of data the system can process within a given period of time.
+    - Also referred to as transfer rate or performance.
+  - **ZooKeeper**
+    - A centralized and distributed service used to manage configuration, synchronization, and coordination in distributed systems.
+  - Visual Explanations
+    - ![image](https://github.com/user-attachments/assets/f77d30db-6c34-407a-be53-7061c98bd70d)
+    - ![image](https://github.com/user-attachments/assets/2f89b6f6-c781-4fef-934c-b451a1147255)
