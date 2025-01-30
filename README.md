@@ -357,6 +357,78 @@
   - ![alt text](image.png)
 
 # Shell script
+- ### Bash String Comparison Issue with Time (`HH:MM`)  
+- **Question:** Why does the following Bash script not work as expected?  
+  ```bash
+  hourMinute="00:01"
+  if [[ "$hourMinute" >= "00:00" && "$hourMinute" < "18:30" ]]; then
+    hourMinute="18:35"
+  fi
+  echo $hourMinute
+  ```
+  - Bash performs **lexicographical string comparison**, which does not work correctly for time values in `HH:MM` format. The colon (`:`) in `"HH:MM"` can cause unexpected results in comparisons.  
+  - Using only `>` instead `>=` it will work?
+    - No, the fundamental problem remains: Bash performs lexicographical string comparisons when using
+  - What is lexicographical string comparison?
+    - Lexicographical string comparison is a way of comparing strings **character by character**, based on their ASCII values, just like words are ordered in a dictionary.  
+    - ### 🔹 **How Does It Work?**
+    - It compares characters from **left to right**.
+    - If two strings have different characters at any position, the comparison stops there.
+    - The order follows the **ASCII table**, where:
+      - `"0"` (ASCII 48) < `"1"` (ASCII 49) < `"2"` (ASCII 50) ...  
+      - `"9"` (ASCII 57) < `":"` (ASCII 58) < `"A"` (ASCII 65)  
+      - Lowercase letters (`"a"` - `"z"`) have higher values than uppercase (`"A"` - `"Z"`).  
+
+    - ### 🔹 **Examples in Bash**
+    ```bash
+    [[ "apple" < "banana" ]]  # ✅ True (Because 'a' < 'b')
+    [[ "car" > "banana" ]]    # ✅ True (Because 'c' > 'b')
+    [[ "12:30" < "18:30" ]]   # ❌ Unexpected! ':' (ASCII 58) affects comparison
+    ```
+    - ### 🔹 **Problem with `HH:MM` Time Comparison**
+    - Since `:` (ASCII 58) comes **before** numbers (`0-9`), it can lead to **incorrect results**:
+    ```bash
+    [[ "2:00" > "12:00" ]]  # ❌ False (because '2' comes before '1' in ASCII order!)
+    ```
+    - Even though **2:00 is later than 12:00**, lexicographical comparison treats it as smaller.
+    - ### 🔹 **Solution: Convert to Numbers**
+    - To compare times correctly in Bash, convert `"HH:MM"` into total **minutes**:
+    ```bash
+    timeToMinutes() {
+      IFS=":" read -r h m <<< "$1"
+      echo $((10#$h * 60 + 10#$m))
+    }
+    if (( $(timeToMinutes "12:30") < $(timeToMinutes "18:30") )); then
+      echo "Correct comparison!"
+    fi
+    ```
+  - ### Fix: Convert Time to Minutes  
+  - **Solution:** Convert `HH:MM` into total minutes and compare numerically.  
+  ```bash
+  hourMinute="00:01"
+  ```
+  - # Function to convert HH:MM to total minutes
+  ```bash
+  timeToMinutes() {
+    IFS=":" read -r h m <<< "$1"
+    echo $((10#$h * 60 + 10#$m))
+  }
+  ```
+  - # Reference times in minutes
+  currentMinutes=$(timeToMinutes "$hourMinute")
+  minLimit=$(timeToMinutes "00:00")
+  maxLimit=$(timeToMinutes "18:30")
+  ```bash
+  if (( currentMinutes >= minLimit && currentMinutes < maxLimit )); then
+    hourMinute="18:35"
+  fi
+  echo "$hourMinute"
+  ```
+  - **Explanation:**  
+  - The function `timeToMinutes` converts `"HH:MM"` into total minutes (`HH * 60 + MM`).  
+  - `10#$h` ensures leading zeros are handled correctly (avoiding octal interpretation).  
+  - Numeric comparison now works correctly.  
+
 - Some `space` problems I had
   - Spaces kinda define how the code run, like Python for example
   - Declaring variable
