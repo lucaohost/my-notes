@@ -441,28 +441,36 @@
   - summarize all questions and answers in English and format in markdown in topics using `-`.
 
 
-# Web Development
-  - Which protocol rest and graphql use?
-    - Both **REST** and **GraphQL** use **HTTP (Hypertext Transfer Protocol)** as their underlying protocol for communication between clients and servers.  
-    - **REST** typically follows standard HTTP methods like `GET`, `POST`, `PUT`, `DELETE`, and `PATCH` to perform CRUD (Create, Read, Update, Delete) operations. It relies on URLs to represent resources and uses headers and status codes for communication.  
-    - **GraphQL**, on the other hand, usually uses HTTP `POST` requests (though `GET` can be used for queries) to send a structured query to a single endpoint, allowing clients to request exactly the data they need.  
-    - Both can also be used over **WebSockets** for real-time updates, but HTTP remains the primary transport protocol.
-  - 
-  -  HTTP
-    - **Body**: The entire content sent in a message, such as an HTTP request.  
-    - **Payload**: Only the useful and relevant data within the body that will be processed by the application.
-    - **Example**: The body includes metadata and data, while the payload is just the useful content (the data).
-    ```json
-    {
-      "metadata": {
-        "timestamp": "2025-01-14T10:00:00Z"
-      },
-      "data": {
-        "name": "Lucas",
-        "email": "lucas@example.com"
-      }
+# Software Development
+- By generating a random UUID like this, can we not randomly overwrite any data that already has that ID?
+  - Yes, a randomly generated UUID **could** collide with an existing one, but the probability is extremely low. UUID v4 has **122 bits of entropy**, resulting in **2¹²² possible values**.  
+  - ### Collision Probability  
+  - Even if you generate **1 billion UUIDs per second** for **100 years**, the chance of a collision remains below **50%** (based on the birthday paradox).  
+  - ### Avoiding Collisions  
+  - 1. **Check the database** before saving a new UUID.  
+  - 2. **Use UUID v1** (timestamp + MAC address) for globally unique IDs.  
+  - 3. **Combine UUID with another identifier**, like a namespace.  
+  - In practice, the risk is so low that most systems don’t worry about it. UUIDs are widely used in databases without issues.
+- Which protocol rest and graphql use?
+  - Both **REST** and **GraphQL** use **HTTP (Hypertext Transfer Protocol)** as their underlying protocol for communication between clients and servers.  
+  - **REST** typically follows standard HTTP methods like `GET`, `POST`, `PUT`, `DELETE`, and `PATCH` to perform CRUD (Create, Read, Update, Delete) operations. It relies on URLs to represent resources and uses headers and status codes for communication.  
+  - **GraphQL**, on the other hand, usually uses HTTP `POST` requests (though `GET` can be used for queries) to send a structured query to a single endpoint, allowing clients to request exactly the data they need.  
+  - Both can also be used over **WebSockets** for real-time updates, but HTTP remains the primary transport protocol.
+-  HTTP
+  - **Body**: The entire content sent in a message, such as an HTTP request.  
+  - **Payload**: Only the useful and relevant data within the body that will be processed by the application.
+  - **Example**: The body includes metadata and data, while the payload is just the useful content (the data).
+  ```json
+  {
+    "metadata": {
+      "timestamp": "2025-01-14T10:00:00Z"
+    },
+    "data": {
+      "name": "Lucas",
+      "email": "lucas@example.com"
     }
-    ```
+  }
+  ```
 
 # English Notes for Brazilians
 - Verbo pertencer
