@@ -89,7 +89,34 @@
   - **Precedence**: Local (`--local`) > Global (`--global`) > System (`--system`).
 
 # Python
-- Setting up environment
+- is there Null in Python?
+  - No, Python does not have null like other languages such as JavaScript, Java, or C#. Instead, Python uses None to represent the absence of a value.
+- This code will run properly?
+  ```listToBeSorted.sort()```
+  - No, because .sort() changes the array, but not return any value
+  - What will be printed then?
+    - It will be printed `None`
+  - **What is `None` in Python?**
+    - `None` represents the **absence of a value** or **a null value**.
+    - It belongs to the `NoneType` data type.
+    - `None` is **not** `0`, `False`, or an empty string (`""`).
+  ---
+  - **Key Properties**
+    - Functions return `None` by default if no return statement is provided.
+    - `None` is often used to initialize variables with no value yet.
+    - Checking `None` should be done using `is` instead of `==` (e.g., `if x is None:`).
+  ---
+  - **Common Use Cases**
+    - **Default Return Value in Functions**: Functions return `None` if they don’t explicitly return anything.
+    - **Placeholder for Missing Values**: Used to indicate that a variable has no assigned value yet.
+    - **Avoiding Mutable Default Arguments**: Prevents unintended mutations in functions.
+    - **Optional Function Arguments**: Used to set default values when no argument is provided.
+  ---
+  - **Best Practices**
+    - ✅ Use `None` when a variable has an **unknown or missing value**.
+    - ✅ Use `is None` for comparison instead of `== None`.
+    - ✅ Avoid using mutable default arguments like lists (`[]`) by using `None` as a default instead.
+- **Setting up environment**
   - First install venv, to create a exclusive virtual environment for yout project
     - Doing that, we avoid conflict on multiple libs and versions
   - Go to your project folder
@@ -263,6 +290,80 @@
 
   print(sum)  # Output: 2
   ```
+- **List (Dynamic Array)**
+```python
+lst = [1, 2, 3, 4]
+# Iterating over values
+for item in lst:
+    print(item)
+# Iterate over indexes and values
+for index, value in enumerate(lst):
+  print(f"Index {index}: Value {value}")
+```
+  - Operations with List
+    - Access (Indexing) | `lst[i]`
+    - Access last index | `lst[-1]` 
+    - Reverse           | `lst.reverse()`
+    - Append            | `lst.append(x)`    
+    - Insert at i       | `lst.insert(i, x)`
+    - Remove by index   | `del lst[i]`      
+    - Remove by value   | `lst.remove(x)`
+      - Remove only first value occurence
+      - To remove all, use for or list comprehension
+    - Pop from end      | `lst.pop()`        
+    - Pop from i        | `lst.pop(i)`       
+    - Search (Linear)   | `x in lst`         
+    - Sort              | `lst.sort()`
+      - It can handle decimal and negative values   
+    - Merge
+    - Find index
+    - Value exists?
+
+-  **Set (Unordered Collection of Unique Elements)**
+```python
+  s = {1, 2, 3}
+```
+  - Declare with `{}` instead `[]`
+  - Add Element     | `s.add(x)`       
+  - Remove Element  | `s.remove(x)`    
+  - Check Existence | `x in s`         
+  - Union           | `s1 | s2`        
+  - Intersection    | `s1 & s2`        
+  - Difference      | `s1 - s2`        
+- **Dictionary (Hash Table)**
+```python
+d = {'a': 1, 'b': 2, 'c': 3}
+d['d'] = 4 
+# Iterating over keys (default)
+for key in d:
+    print(key, d[key])
+# Iterating over values
+for value in d.values():
+    print(value)
+# Iterating over key-value pairs
+for key, value in d.items():
+    print(f"Key: {key}, Value: {value}")
+```
+  - Insert       | `d[k] = v`       
+  - Update       | `d[k] = new_v`   
+  - Lookup       | `d[k]`           
+  - Remove       | `del d[k]`       
+  - Exisits      | `k in d`         
+  - Iterate Keys | `for k in d`     
+- **Deque (Double-Ended Queue)**
+```python
+dq = deque([1, 2, 3])
+# Simple for-loop
+for item in dq:
+    print(item)
+# Iterating in reverse
+for item in reversed(dq):
+    print(item)
+```
+  - Append Right  | `dq.append(x)`    
+  - Append Left   | `dq.appendleft(x)`
+  - Pop Right     | `dq.pop()`        
+  - Pop Left      | `dq.popleft()`    
   
 # Linux / Ubuntu
 - Issue with session keyring on Ubuntu using biometrics
@@ -545,6 +646,11 @@
   ```
 
 # English Notes for Brazilians
+- Comprehension
+  - Kinda differente than the portuguese word
+  - Easier to memorize
+    - Compre / Hension
+    - Without two `e` like in portuguese
 - Verbo pertencer
   - Which topic of software development this questions belongs.
     - `Belongs` o verbo `Pertencer`
@@ -804,3 +910,87 @@ Which sentence is correct and why?
   - Visual Explanations
     - ![image](https://github.com/user-attachments/assets/f77d30db-6c34-407a-be53-7061c98bd70d)
     - ![image](https://github.com/user-attachments/assets/2f89b6f6-c781-4fef-934c-b451a1147255)
+
+# LeetCode
+- Classic Algortithms to know in LeetCode Interviews
+---
+  - **1. Graph Algorithms**  
+    - **Breadth-First Search (BFS)** – Useful for shortest paths in an unweighted graph.  
+    - **Depth-First Search (DFS)** – Used for connected components, cycle detection, and tree traversal.  
+    - **Dijkstra’s Algorithm** – Finds the shortest path in a weighted graph (non-negative weights).  
+    - **Bellman-Ford Algorithm** – Shortest path with negative weights (detects negative cycles).  
+    - **Floyd-Warshall Algorithm** – All-pairs shortest paths.  
+    - **Kruskal’s & Prim’s Algorithm** – Find Minimum Spanning Trees (MST).  
+    - **Topological Sorting** – Used in scheduling and dependency resolution (Kahn’s Algorithm or DFS-based).  
+    - **A* Algorithm** – Pathfinding algorithm used in AI.  
+---
+  - **2. Sorting Algorithms**  
+    - **QuickSort** – Average **O(n log n)**, worst **O(n²)** (pivot-based, in-place).  
+    - **MergeSort** – Always **O(n log n)** (stable, divide and conquer).  
+    - **HeapSort** – Uses a binary heap, **O(n log n)**.  
+    - **Counting Sort / Radix Sort** – For integers with limited range, **O(n)**.  
+    - **Bubble Sort, Selection Sort, Insertion Sort** – **O(n²)** (useful for small data sets).  
+---
+  - **3. Searching Algorithms**  
+    - **Binary Search** – Efficient search in sorted arrays, **O(log n)**.  
+    - **Ternary Search** – Used for unimodal functions.  
+    - **Exponential Search** – Faster search in a boundless sorted list.  
+---
+  - **4. Dynamic Programming (DP)**  
+    - **Fibonacci Sequence (Memoization & Tabulation)**  
+    - **Knapsack Problem (0/1 and Fractional)**  
+    - **Longest Common Subsequence (LCS)**  
+    - **Longest Increasing Subsequence (LIS)**  
+    - **Coin Change Problem**  
+    - **Edit Distance (Levenshtein Distance)**  
+    - **Subset Sum Problem**  
+    - **Matrix Chain Multiplication**  
+---
+  - **5. Greedy Algorithms**  
+    - **Activity Selection Problem**  
+    - **Huffman Coding**  
+    - **Dijkstra’s Algorithm** (also fits here)  
+    - **Greedy Coloring of Graphs**  
+    - **Interval Scheduling**
+---
+  - **6. Bit Manipulation**  
+    - **Check if a number is power of 2**  
+    - **Count set bits in an integer**  
+    - **Find the only non-repeating element (XOR trick)**  
+    - **Swap two numbers without extra space**  
+---
+  - **7. Tree Algorithms**  
+    - **Binary Tree Traversals (Inorder, Preorder, Postorder, Level Order)**  
+    - **Lowest Common Ancestor (LCA) using Binary Lifting or DFS**  
+    - **Diameter of a Binary Tree**  
+    - **Segment Tree / Fenwick Tree (Binary Indexed Tree, BIT)**  
+---
+  - **8. String Algorithms**  
+    - **KMP Algorithm** – Pattern searching in **O(n + m)**.  
+    - **Rabin-Karp Algorithm** – Rolling hash for pattern matching.  
+    - **Z Algorithm** – Used for substring search.  
+    - **Trie (Prefix Tree)** – Used in autocomplete and dictionary searches.  
+    - **Manacher’s Algorithm** – Finds longest palindromic substring in **O(n)**.  
+---
+  - **9. Math & Number Theory**  
+    - **Greatest Common Divisor (GCD) using Euclidean Algorithm**  
+    - **Sieve of Eratosthenes** – Find all primes up to **n** efficiently.  
+    - **Modulo Arithmetic & Fermat’s Theorem**  
+    - **Fast Exponentiation (Exponentiation by Squaring)**  
+    - **Chinese Remainder Theorem (CRT)**  
+---
+  - **10. Advanced Data Structures**  
+    - **Hash Tables / Hash Maps**  
+    - **Heaps / Priority Queues (Min-Heap, Max-Heap)**  
+    - **Disjoint Set Union (Union-Find) with Path Compression**  
+    - **Bloom Filters**  
+    - **Suffix Arrays & Suffix Trees**  
+    - **Treaps (Tree + Heap)**  
+    - **Sliding Window**
+
+# VSCode
+  - How put multicursor clicking?
+    - Alt + Shift + Clicks
+  - How put multicursor searching
+    - Select occurence
+    - Ctrl + Shift + L
