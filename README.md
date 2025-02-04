@@ -98,8 +98,14 @@
     - It will be printed `None`
   - **What is `None` in Python?**
     - `None` represents the **absence of a value** or **a null value**.
-    - It belongs to the `NoneType` data type.
+    - It's a object belongs to the `NoneType` data type.
+      - It's a unique object created with singleton
+    - ✅ Use `None` when a variable has an **unknown or missing value**.
+      - ✅ Use `is None` for comparison instead of `== None`.
+        - Using == can produce false positives
     - `None` is **not** `0`, `False`, or an empty string (`""`).
+    - ✅ Avoid using mutable default arguments like lists (`[]`) by using `None` as a default instead.
+    - ✅ Use `None` when a variable has an **unknown or missing value**.
   ---
   - **Key Properties**
     - Functions return `None` by default if no return statement is provided.
@@ -111,11 +117,7 @@
     - **Placeholder for Missing Values**: Used to indicate that a variable has no assigned value yet.
     - **Avoiding Mutable Default Arguments**: Prevents unintended mutations in functions.
     - **Optional Function Arguments**: Used to set default values when no argument is provided.
-  ---
-  - **Best Practices**
-    - ✅ Use `None` when a variable has an **unknown or missing value**.
-    - ✅ Use `is None` for comparison instead of `== None`.
-    - ✅ Avoid using mutable default arguments like lists (`[]`) by using `None` as a default instead.
+  ---  
 - **Setting up environment**
   - First install venv, to create a exclusive virtual environment for yout project
     - Doing that, we avoid conflict on multiple libs and versions
