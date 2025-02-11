@@ -737,7 +737,7 @@ Which sentence is correct and why?
 - The author suggests that teams define working agreements to determine an acceptable level of risk and use visual tools, such as the risk matrix, to monitor and plan tasks more effectively.  
 - ([agilemomentum.wordpress.com](https://agilemomentum.wordpress.com/2018/02/18/esforco-e-complexidade-quando-tamanho-realmente-importa/?utm_source=chatgpt.com))  
 
-# VS Code
+# VSCode
 - Search using Regular Expressions
   - ![alt text](image-4.png)
   - `#.*Ubuntu`
@@ -754,6 +754,11 @@ Which sentence is correct and why?
     - Finishing with the word `Ubuntu`
   - If I tried searching for `# Ubuntu`, I'll find nothing, because the line is
     - `# Linux / Ubuntu`
+- How put multicursor clicking?
+  - Alt + Shift + Clicks
+- How put multicursor searching
+  - Select occurence
+  - Ctrl + Shift + L
 
 # Github Copilot
 - How install on VSCode?
@@ -884,7 +889,6 @@ Which sentence is correct and why?
   - Communication is asynchronous, so we don’t need to wait for responses, removing blocking times and allowing more requests to be processed per second.
 
 - Concepts
-  - Here’s the continuation of the summarized version in markdown with bullet points:
   - **Producers**
     - Produce messages in Kafka.
   - **Consumers**
@@ -990,9 +994,13 @@ Which sentence is correct and why?
     - **Treaps (Tree + Heap)**  
     - **Sliding Window**
 
-# VSCode
-  - How put multicursor clicking?
-    - Alt + Shift + Clicks
-  - How put multicursor searching
-    - Select occurence
-    - Ctrl + Shift + L
+# Markdown
+- For Markdown Files, 2 tabs size is enought
+  - More than that, it will make the sub lines too much longer
+- How set 2 tabs size in VSCode for Markdown Files?
+  - Ctrl + Shift P
+  - Search for Tab
+  - Apply 2 tab size
+- Start `-` topics alligned with `#` titles, withou using tabs
+  - Markdown will format a difference and make lines less longer
+  - Use tabs for subtopics
