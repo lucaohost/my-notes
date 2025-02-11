@@ -136,13 +136,13 @@
     - pip freeze > requirements.txt
   - Create a .gitignore to not commit dependencies
     ```
-    # Ignore virtual environment directory
+    #Ignore virtual environment directory
     your_project_name/
 
-    # Python bytecode files
+    #Python bytecode files
     *.pyc
 
-    # IDE settings (for Visual Studio Code, for example)
+    #IDE settings (for Visual Studio Code, for example)
     .vscode/
     ```
   - Commit all on git
@@ -251,54 +251,54 @@
   - Use queue.Queue() for multithreading.
   ```python
   import queue
-  q = queue.Queue()  # Create a queue
-  q.put(1)  # Add elements
+  q = queue.Queue()  #Create a queue
+  q.put(1)  #Add elements
   q.put(2)
   q.put(3)
-  print(q.get())  # Remove and return the first element (FIFO)
+  print(q.get())  #Remove and return the first element (FIFO)
   print(q.get())
   print(q.get())
-  print(q.empty())  # Check if the queue is empty
+  print(q.empty())  #Check if the queue is empty
   ```
   - Use collections.deque() for fast performance in single-threaded applications.
   ```python
   from collections import deque
-  q = deque()  # Create a queue
-  q.append(1)  # Add elements
+  q = deque()  #Create a queue
+  q.append(1)  #Add elements
   q.append(2)
   q.append(3)
-  print(q.popleft())  # Remove and return the first element (FIFO)
+  print(q.popleft())  #Remove and return the first element (FIFO)
   print(q.popleft())
   print(q.popleft())
-  print(len(q) == 0)  # Check if the queue is empty
+  print(len(q) == 0)  #Check if the queue is empty
   ```
   - Avoid using lists unless you have very small data.
   ```python
   q = []
-  q.append(1)  # Add elements
+  q.append(1)  #Add elements
   q.append(2)
   q.append(3)
-  print(q.pop(0))  # Remove the first element (FIFO)
+  print(q.pop(0))  #Remove the first element (FIFO)
   print(q.pop(0))
   print(q.pop(0))
-  print(len(q) == 0)  # Check if the queue is empty
+  print(len(q) == 0)  #Check if the queue is empty
   ```
 - Increment Operator
   - In Python, the ++ (increment operator) from languages like C++ or Java does not exist. Instead, you need to use += 1.
   ```python
   sum = 0
-  sum += 1  # Equivalent to sum++
-  sum += 1  # Increment again
+  sum += 1  #Equivalent to sum++
+  sum += 1  #Increment again
 
-  print(sum)  # Output: 2
+  print(sum)  #Output: 2
   ```
 - **List (Dynamic Array)**
 ```python
 lst = [1, 2, 3, 4]
-# Iterating over values
+#Iterating over values
 for item in lst:
     print(item)
-# Iterate over indexes and values
+#Iterate over indexes and values
 for index, value in enumerate(lst):
   print(f"Index {index}: Value {value}")
 ```
@@ -336,13 +336,13 @@ for index, value in enumerate(lst):
 ```python
 d = {'a': 1, 'b': 2, 'c': 3}
 d['d'] = 4 
-# Iterating over keys (default)
+#Iterating over keys (default)
 for key in d:
     print(key, d[key])
-# Iterating over values
+#Iterating over values
 for value in d.values():
     print(value)
-# Iterating over key-value pairs
+#Iterating over key-value pairs
 for key, value in d.items():
     print(f"Key: {key}, Value: {value}")
 ```
@@ -355,10 +355,10 @@ for key, value in d.items():
 - **Deque (Double-Ended Queue)**
 ```python
 dq = deque([1, 2, 3])
-# Simple for-loop
+#Simple for-loop
 for item in dq:
     print(item)
-# Iterating in reverse
+#Iterating in reverse
 for item in reversed(dq):
     print(item)
 ```
@@ -460,7 +460,7 @@ for item in reversed(dq):
   - ![alt text](image.png)
 
 # Shell script
-- ### Bash String Comparison Issue with Time (`HH:MM`)  
+- Bash String Comparison Issue with Time (`HH:MM`)  
 - **Question:** Why does the following Bash script not work as expected?  
   ```bash
   hourMinute="00:01"
@@ -474,7 +474,7 @@ for item in reversed(dq):
     - No, the fundamental problem remains: Bash performs lexicographical string comparisons when using
   - What is lexicographical string comparison?
     - Lexicographical string comparison is a way of comparing strings **character by character**, based on their ASCII values, just like words are ordered in a dictionary.  
-    - ### 🔹 **How Does It Work?**
+    - **How Does It Work?**
     - It compares characters from **left to right**.
     - If two strings have different characters at any position, the comparison stops there.
     - The order follows the **ASCII table**, where:
@@ -482,19 +482,19 @@ for item in reversed(dq):
       - `"9"` (ASCII 57) < `":"` (ASCII 58) < `"A"` (ASCII 65)  
       - Lowercase letters (`"a"` - `"z"`) have higher values than uppercase (`"A"` - `"Z"`).  
 
-    - ### 🔹 **Examples in Bash**
+    - **Examples in Bash**
     ```bash
-    [[ "apple" < "banana" ]]  # ✅ True (Because 'a' < 'b')
-    [[ "car" > "banana" ]]    # ✅ True (Because 'c' > 'b')
-    [[ "12:30" < "18:30" ]]   # ❌ Unexpected! ':' (ASCII 58) affects comparison
+    [[ "apple" < "banana" ]]  #True (Because 'a' < 'b')
+    [[ "car" > "banana" ]]    #True (Because 'c' > 'b')
+    [[ "12:30" < "18:30" ]]   #Unexpected! ':' (ASCII 58) affects comparison
     ```
-    - ### 🔹 **Problem with `HH:MM` Time Comparison**
+    - **Problem with `HH:MM` Time Comparison**
     - Since `:` (ASCII 58) comes **before** numbers (`0-9`), it can lead to **incorrect results**:
     ```bash
-    [[ "2:00" > "12:00" ]]  # ❌ False (because '2' comes before '1' in ASCII order!)
+    [[ "2:00" > "12:00" ]]  #False (because '2' comes before '1' in ASCII order!)
     ```
     - Even though **2:00 is later than 12:00**, lexicographical comparison treats it as smaller.
-    - ### 🔹 **Solution: Convert to Numbers**
+    - **Solution: Convert to Numbers**
     - To compare times correctly in Bash, convert `"HH:MM"` into total **minutes**:
     ```bash
     timeToMinutes() {
@@ -505,19 +505,19 @@ for item in reversed(dq):
       echo "Correct comparison!"
     fi
     ```
-  - ### Fix: Convert Time to Minutes  
+  - Fix: Convert Time to Minutes  
   - **Solution:** Convert `HH:MM` into total minutes and compare numerically.  
   ```bash
   hourMinute="00:01"
   ```
-  - # Function to convert HH:MM to total minutes
+  - Function to convert HH:MM to total minutes
   ```bash
   timeToMinutes() {
     IFS=":" read -r h m <<< "$1"
     echo $((10#$h * 60 + 10#$m))
   }
   ```
-  - # Reference times in minutes
+  - Reference times in minutes
   currentMinutes=$(timeToMinutes "$hourMinute")
   minLimit=$(timeToMinutes "00:00")
   maxLimit=$(timeToMinutes "18:30")
@@ -619,9 +619,9 @@ for item in reversed(dq):
 # Software Development
 - By generating a random UUID like this, can we not randomly overwrite any data that already has that ID?
   - Yes, a randomly generated UUID **could** collide with an existing one, but the probability is extremely low. UUID v4 has **122 bits of entropy**, resulting in **2¹²² possible values**.  
-  - ### Collision Probability  
+  - Collision Probability  
   - Even if you generate **1 billion UUIDs per second** for **100 years**, the chance of a collision remains below **50%** (based on the birthday paradox).  
-  - ### Avoiding Collisions  
+  - Avoiding Collisions  
   - 1. **Check the database** before saving a new UUID.  
   - 2. **Use UUID v1** (timestamp + MAC address) for globally unique IDs.  
   - 3. **Combine UUID with another identifier**, like a namespace.  
@@ -719,18 +719,18 @@ Which sentence is correct and why?
 # Agile
 - The article *"Effort and Complexity: When Size Really Matters"* discusses the challenges of estimation in agile teams, emphasizing the importance of considering both effort and complexity when estimating tasks.  
 - The author proposes a five-level scale for each of these factors:  
-### **Effort:**  
-- **Level 1:** Minimal effort, completed in a few hours.  
-- **Level 2:** Requires one or two days of work.  
-- **Level 3:** Moderate effort, between three to five days.  
-- **Level 4:** Large task, possibly more than a week; a candidate for splitting.  
-- **Level 5:** Extremely large, difficult to estimate; should be broken down into smaller parts.  
-### **Complexity:**  
-- **Level 1:** No technical or business unknowns; skills are present in the team.  
-- **Level 2:** Few unknowns, with no significant risks.  
-- **Level 3:** Dependencies on other tasks or systems; may require additional study.  
-- **Level 4:** Increased dependencies and difficulty in description; requires experienced professionals.  
-- **Level 5:** Highly complex, with many dependencies and unknowns; needs in-depth alignment.  
+  - **Effort:**  
+    - **Level 1:** Minimal effort, completed in a few hours.  
+    - **Level 2:** Requires one or two days of work.  
+    - **Level 3:** Moderate effort, between three to five days.  
+    - **Level 4:** Large task, possibly more than a week; a candidate for splitting.  
+    - **Level 5:** Extremely large, difficult to estimate; should be broken down into smaller parts.  
+  - **Complexity:**  
+    - **Level 1:** No technical or business unknowns; skills are present in the team.  
+    - **Level 2:** Few unknowns, with no significant risks.  
+    - **Level 3:** Dependencies on other tasks or systems; may require additional study.  
+    - **Level 4:** Increased dependencies and difficulty in description; requires experienced professionals.  
+    - **Level 5:** Highly complex, with many dependencies and unknowns; needs in-depth alignment.  
 
 - The intersection of these levels results in a risk matrix that helps the team assess the feasibility of completing a task within a sprint. Tasks with high levels of effort and complexity pose greater risks and may need to be better understood or broken down.
 - ![alt text](image-2.png)
@@ -1004,3 +1004,10 @@ Which sentence is correct and why?
 - Start `-` topics alligned with `#` titles, withou using tabs
   - Markdown will format a difference and make lines less longer
   - Use tabs for subtopics
+
+# Computer Science
+- **Who invented the OO paradigm?**  
+  - Ole-Johan Dahl and Kristen Nygaard invented the object-oriented (OO) programming paradigm in the 1960s by creating the **Simula** language. It introduced concepts like **classes, objects, inheritance, and encapsulation**, which influenced all later OO languages.  
+
+- **Who is Alan Kay?**  
+  - Alan Kay was a key figure in popularizing and advancing OO programming. He was one of the creators of **Smalltalk**, the first fully OO language, and introduced important principles like **message passing** and **late binding**. He also coined the term **"object-oriented programming"** and influenced modern software development.
