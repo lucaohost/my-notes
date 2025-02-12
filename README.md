@@ -1005,9 +1005,37 @@ Which sentence is correct and why?
   - Markdown will format a difference and make lines less longer
   - Use tabs for subtopics
 
+---  
+
 # Computer Science
 - **Who invented the OO paradigm?**  
   - Ole-Johan Dahl and Kristen Nygaard invented the object-oriented (OO) programming paradigm in the 1960s by creating the **Simula** language. It introduced concepts like **classes, objects, inheritance, and encapsulation**, which influenced all later OO languages.  
-
 - **Who is Alan Kay?**  
   - Alan Kay was a key figure in popularizing and advancing OO programming. He was one of the creators of **Smalltalk**, the first fully OO language, and introduced important principles like **message passing** and **late binding**. He also coined the term **"object-oriented programming"** and influenced modern software development.
+- How is Big O's \( O(\log n) \) related to logarithmic curves?
+  - \( O(\log n) \) represents algorithms whose number of operations grows logarithmically with input size.
+  - A common example is **binary search**, which halves the problem size in each step.
+- What is a logarithmic curve in mathematics?
+  - A function of the form \( y = \log n \), which starts steep but flattens as \( n \) increases.
+  - This matches the behavior of logarithmic-time algorithms.
+- Why is logarithmic complexity important in algorithms?
+  - **Efficiency**: \( O(\log n) \) scales well with large inputs.
+  - **Examples**:
+    - Searching in a **binary search tree (BST)** takes \( O(\log n) \).
+    - **Divide-and-conquer algorithms** (e.g., mergesort) involve \( O(\log n) \) recursive steps.
+    - **B-trees** and other balanced data structures optimize search operations to \( O(\log n) \).
+- What does the logarithmic curve tell us about algorithm performance?
+  - Logarithmic-time algorithms **perform a lot of work for small inputs**, but grow **very slowly** for larger inputs.
+  - This makes them highly **scalable**.
+
+---
+
+# Math
+- Linear x Exponential x Logarithmic
+  - There are three main types of growth and decay curves in mathematics and science: linear, exponential, and logarithmic.
+  - **Linear Curve**: Constant rate of change, straight-line graph.
+  ![alt text](image-5.png)
+  - **Exponential Curve**: Accelerating growth/decay, steep curve.
+  ![alt text](image-6.png)
+  - **Logarithmic Curve**: Rapid initial growth, then slows, leveling curve.
+  ![alt text](image-7.png)
