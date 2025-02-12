@@ -1027,6 +1027,14 @@ Which sentence is correct and why?
 - What does the logarithmic curve tell us about algorithm performance?
   - Logarithmic-time algorithms **perform a lot of work for small inputs**, but grow **very slowly** for larger inputs.
   - This makes them highly **scalable**.
+- Who was Terry Davis?  
+  - Terry A. Davis was an American programmer who single-handedly created *TempleOS*, an operating system written in Assembly and C. He worked on it for over ten years, believing it was inspired by God. Davis was extremely talented but also struggled with schizophrenia. He passed away in 2018.  
+  - Did Linus Torvalds ever comment on him?  
+    - There are no records of Linus Torvalds publicly commenting on Terry Davis. Rumors and anonymous posts online suggest praise, but nothing has been confirmed.  
+  - Is it still possible to access the *TempleOS* source code today?  
+    - Yes, the *TempleOS* source code is available on GitHub and other mirrored repositories, as it was released into the public domain.  
+  - Why is he so respected?  
+    - Terry Davis is respected for having created a complete operating system by himself, which is an extremely difficult achievement. He built everything from scratch, including the kernel, file system, compiler, and graphical interface, using Assembly and C. Moreover, he did this while struggling with schizophrenia, making his accomplishment even more remarkable.
 
 ---
 
