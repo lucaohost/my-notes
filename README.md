@@ -1047,3 +1047,12 @@ Which sentence is correct and why?
   ![alt text](image-6.png)
   - **Logarithmic Curve**: Rapid initial growth, then slows, leveling curve.
   ![alt text](image-7.png)
+- Does a logarithmic curve eventually start decreasing after initially increasing and then flattening out?
+  - A logarithmic function  (with ) never decreases.
+  - It grows quickly at first, then its rate of increase slows down, but it keeps increasing indefinitely.
+  - As , the function keeps rising, just at a slower rate.
+  - As , the function tends to  but never reverses its upward trend after increasing.
+  - If a function needs to increase and then decrease, a logarithmic function is not suitable—other functions like quadratics or specific sigmoid functions should be considered.
+
+
+
