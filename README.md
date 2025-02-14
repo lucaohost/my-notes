@@ -842,35 +842,16 @@ Which sentence is correct and why?
     .map(Address::getCountry)
     .orElse("Unknown");
     ```
-- Why can't you access a variable declared inside if/else
-  - The issue you're encountering with the compiler saying "Cannot resolve symbol 'eventType'" is due to variable scope in Java. In your code, eventType is defined inside the if-else blocks and is not accessible outside these blocks.
-  - The variable eventType is declared and initialized within each block of the if and else statements.
-  - Variables declared in this way are local to their respective blocks and cannot be accessed outside of them.
-  - To resolve this issue, you need to declare the eventType variable before the if-else block and then assign it within the blocks. Here's how you can fix the issue:
-  ```java
-  public static Event toOrderV4Event(final EligibleOrder eligibleOrder, final UUID reservationEventUUID, boolean newEventType) {
-      var orderId = eligibleOrder.getExternalUUID();
-      var metadata = buildMetadata(eligibleOrder);
-      
-      EventType eventType; // Declare eventType here
-      
-      if (newEventType) {
-          eventType = EventType.DELIVERY_ORDER_PLACED_AT_BOX;
-      } else {
-          eventType = EventType.PLACED;
-      }
-
-      return Event.builder()
-              .id(reservationEventUUID.toString())
-              .orderId(orderId.toString())
-              .value(eventType.getName())
-              .source(EVENT_SOURCE)
-              .createdAt(Instant.now())
-              .metadata(metadata)
-              .build();
-  }
+- Take care with dumb Null Pointer Exceptions
+  - I saw this code
+  ```java 
+  obj.equals(null)
   ```
-  - By declaring eventType outside of the if-else block, it becomes accessible throughout the entire toOrderV4Event method, resolving the "Cannot resolve symbol 'eventType'" error.
+  - That's wrong, because if obj is null, you'll get a Null Pointer for sure
+  - The correct way is use Optional for null safety or obj == null
+  - Another weird way, but it works: NULL.equals(obj)
+
+---
 
 # Kafka
 - **What is Kafka?**
