@@ -77,6 +77,11 @@
   - A method decorated with @Get, @Post etc. should specify the expected ApiResponse e.g. @ApiOkResponse(type: MyType). These decorators are in the @nestjs/swagger npm package.eslint@darraghor/nestjs-typed/api-method-should-specify-api-response
 
 # Git
+- bumping version of vulnerable libraries is a "build:" type commit?
+  - Bumping the version of vulnerable libraries typically falls under the "chore:" type commit, not a "build:" commit. Here's how they generally differ:
+  - **Chore:** This type is used for tasks that do not affect the application's functionality and do not modify production code. Updating dependencies, including bumping versions of vulnerable libraries, is usually categorized under "chore".
+  - **Build:** This type is used for changes that affect the build system or external dependencies (e.g., npm, Gradle, Maven). While it might seem relevant, "build" is typically more related to changes in the tooling and configuration that are used to manage the build process itself, rather than updating dependencies due to vulnerabilities.
+  - Therefore, it is more appropriate to use "chore:" when committing updates for fixing vulnerabilities in your dependencies.
 - Which commit message pattern is correct?
   - `fix: Header on LDL Pause/Resume request`
   - `fix: Fix Header on LDL Pause/Resume request`
