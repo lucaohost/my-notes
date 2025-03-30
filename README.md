@@ -904,6 +904,56 @@ Which sentence is correct and why?
     - ![image](https://github.com/user-attachments/assets/2f89b6f6-c781-4fef-934c-b451a1147255)
 
 # LeetCode
+- Binary Search
+  - Efficient search in sorted arrays, **O(log n)**.
+  ![alt text](image-8.png)
+  - REMEMBER: The array should be sorted, to use Binary Search.
+    - REMEMBER 2: If you use a native sort function, it will be a performance cost doing that, depending the array size.
+    - I think it's better to use binary search, if the array is already sorted.
+    - Maybe some cases it will be valid, sorte and the use binary search, but only real scenario metric can say that.
+  - The idea is to repeatedly divide the list in half and compare the target value to the middle element. Depending on the comparison result, you either:
+    - Narrow down the search to the left half.
+    - Narrow down the search to the right half.
+  - Binary Search Algorithm:
+  1. Start with the entire list.
+  2. Find the middle element.
+  3. If the middle element is equal to the target, return the index.
+  4. If the target is less than the middle element, repeat the search on the left half.
+  5. If the target is greater, repeat the search on the right half.
+  6. If the search range becomes empty, the target is not in the list.
+```python
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1  # Step 1: Set the search boundaries
+
+    while left <= right:  # Step 2: Continue while there is a search range
+        mid = left + (right - left) // 2  # Step 3: Find the middle index
+        mid_value = arr[mid]  # Get the value at the middle index
+        
+        print(f"Searching between indexes {left} and {right}. Middle index: {mid}, Value: {mid_value}")
+
+        if mid_value == target:  # Step 4: Check if the middle value is the target
+            return mid
+        elif mid_value < target:  # Step 5: Narrow down to the right half
+            left = mid + 1
+        else:  # Step 6: Narrow down to the left half
+            right = mid - 1
+            
+    return -1  # Target not found
+
+# Example usage:
+arr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+target = 7
+index = binary_search(arr, target)
+
+if index != -1:
+    print(f"Element found at index: {index}")
+else:
+    print("Element not found")
+```
+  - Why Use Binary Search?
+  - **Efficiency:** O(log n) time complexity, much faster than linear search O(n).
+  - **Requirements:** The list **must be sorted**.
+--- 
 - Classic Algortithms to know in LeetCode Interviews
 ---
   - **1. Graph Algorithms**  
