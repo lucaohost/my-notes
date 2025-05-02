@@ -94,6 +94,13 @@
   - **Precedence**: Local (`--local`) > Global (`--global`) > System (`--system`).
 
 # Python
+- What remember when using string interpolation on python?
+  - You need to put a `f` before the string, outside the double quotes
+  ```python
+  print(f"Error: Skipping Sheet, Invalid format in file: {file_path}, sheet: {sheet_itle} (First column is not 'Country').")
+  ```
+  - Why `f`?
+    - An f-string (short for formatted string literal) is a feature in Python that allows you to embed variables and expressions directly inside a string by prefixing the string with the letter `f` or `F`
 - is there Null in Python?
   - No, Python does not have null like other languages such as JavaScript, Java, or C#. Instead, Python uses None to represent the absence of a value.
 - This code will run properly?
