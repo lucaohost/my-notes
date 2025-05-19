@@ -629,6 +629,12 @@ for item in reversed(dq):
 
 
 # Software Development
+- DLT and DLQ
+  - DLT = Dead Letter Topic
+  - Similar to DLQ (Dead Letter Queue) but used in topic-based messaging systems
+  - Stores messages that failed to be processed
+  - Common in systems like Apache Kafka
+  - Essential for error handling in distributed systems
 - By generating a random UUID like this, can we not randomly overwrite any data that already has that ID?
   - Yes, a randomly generated UUID **could** collide with an existing one, but the probability is extremely low. UUID v4 has **122 bits of entropy**, resulting in **2¹²² possible values**.  
   - Collision Probability  
@@ -659,7 +665,21 @@ for item in reversed(dq):
   }
   ```
 
-# English Notes for Brazilians
+# English Notes for Brazilians / Grammar
+- What's the difference between a sentence and a phrase?
+  - Phrase
+    - Group of words forming a grammatical unit
+    - Lacks either subject or predicate (or both)
+    - Does not express a complete thought
+    - Cannot stand alone
+    - No specific punctuation requirements
+    - Examples: "in the garden," "running quickly"
+  - Sentence:
+    - Contains both subject and predicate (verb)
+    - Expresses a complete thought
+    - Can stand alone as a complete unit of communication
+    - Begins with capital letter and ends with punctuation
+    - Examples: "She walked in the garden," "The man was running quickly"
 - Comprehension
   - Kinda differente than the portuguese word
   - Easier to memorize
