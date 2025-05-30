@@ -1270,3 +1270,26 @@ Ou assim:
 ---
 
 Se quiser, posso te ajudar a modelar uma tabela DynamoDB com base em um caso real do teu dia a dia. Quer tentar?
+
+Não há **diferença entre `.yml` e `.yaml`** — são apenas **duas extensões diferentes** para arquivos com o mesmo formato: **YAML (YAML Ain’t Markup Language)**.
+
+### ✅ Resumo:
+
+| Extensão | Significado                | Diferença prática |
+| -------- | -------------------------- | ----------------- |
+| `.yaml`  | YAML Ain’t Markup Language | Nenhuma           |
+| `.yml`   | Abreviação de `.yaml`      | Nenhuma           |
+
+### ℹ️ Detalhes:
+
+* Ambos são usados para arquivos de configuração em projetos como Docker, GitHub Actions, Kubernetes etc.
+* `.yaml` é a **extensão oficial** recomendada pela especificação.
+* `.yml` é uma alternativa usada por **conveniência**, especialmente em sistemas mais antigos que não suportavam extensões com mais de 3 letras.
+
+### 💡 Quando usar qual?
+
+* **Por padrão**, prefira `.yaml`, já que é mais explícita e moderna.
+* Mas **verifique o que a ferramenta exige**. Por exemplo:
+
+  * Docker aceita `.yml`
+  * GitHub Actions usa `.yaml`
