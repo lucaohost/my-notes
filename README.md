@@ -665,7 +665,10 @@ for item in reversed(dq):
   }
   ```
 
-# English Notes for Brazilians / Grammar
+# English for Brazilians / Grammar
+- NIT (nitpicking)
+giving too much attention to details that are not important, especially as a way of criticizing:
+If you spent less time nitpicking, you'd get more work done.
 - What's the difference between a sentence and a phrase?
   - Phrase
     - Group of words forming a grammatical unit
