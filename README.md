@@ -1117,5 +1117,156 @@ else:
   - As , the function tends to  but never reverses its upward trend after increasing.
   - If a function needs to increase and then decrease, a logarithmic function is not suitable—other functions like quadratics or specific sigmoid functions should be considered.
 
+# DynamoDB
+---
+
+### 🔰 Visão Geral do DynamoDB
+
+* **Tipo**: Banco de dados NoSQL, orientado a documentos e chave-valor.
+* **Gerenciado pela AWS**: Alta disponibilidade, replicação, escalabilidade automática e backup incluídos.
+* **Totalmente gerenciado**: Você não precisa se preocupar com infraestrutura.
+* **Alta performance**: Latência de milissegundos de um dígito.
+* **Ideal para**: Aplicações com leitura e escrita intensas, como IoT, jogos, e-commerce e aplicações em tempo real.
+
+---
+
+### 🧱 Conceitos Fundamentais
+
+| Conceito           | Explicação                                                                                    |
+| ------------------ | --------------------------------------------------------------------------------------------- |
+| **Tabela**         | Contêiner de dados (como uma "tabela" tradicional).                                           |
+| **Item**           | Um registro na tabela (equivalente a uma "linha").                                            |
+| **Atributo**       | Um campo dentro de um item (equivalente a uma "coluna").                                      |
+| **Chave primária** | Obrigatória. Pode ser só uma *Partition Key* ou uma combinação de *Partition Key + Sort Key*. |
+| **Partition Key**  | Determina onde o item será armazenado fisicamente.                                            |
+| **Sort Key**       | Opcional. Permite armazenar múltiplos itens com a mesma Partition Key.                        |
+| **Throughput**     | Capacidade de leitura e escrita. Pode ser provisionada ou sob demanda.                        |
+
+---
+
+### 🛠️ Operações Básicas
+
+* **PutItem**: Insere ou substitui um item.
+* **GetItem**: Recupera um item por chave primária.
+* **UpdateItem**: Atualiza atributos de um item.
+* **DeleteItem**: Remove um item.
+* **Query**: Busca por Partition Key e filtra por Sort Key.
+* **Scan**: Percorre todos os itens da tabela (menos eficiente).
+
+---
+
+### ⚙️ Modos de Capacidade
+
+1. **Provisionado**:
+
+   * Você define o número de leituras e escritas por segundo.
+   * Pode usar *Auto Scaling*.
+
+2. **Sob demanda**:
+
+   * Paga pelo que usar. Escala automaticamente.
+   * Ideal para cargas imprevisíveis.
+
+---
+
+### 🛡️ Segurança
+
+* **IAM (Identity and Access Management)** para controle de acesso.
+* **Criptografia**: At-rest (em repouso) com KMS e in-transit (em trânsito com HTTPS).
+* **Backups e restores** automáticos e manuais.
+
+---
+
+### 🌍 Casos de Uso Comuns
+
+* Sessões de usuário
+* Carrinho de compras
+* Leaderboards
+* Logs de eventos
+* Catálogos de produtos
+
+---
+
+### 📚 Avançado (o que podemos ver depois)
+
+* Indexes (LSI e GSI)
+* Transações
+* Streams (eventos em tempo real com Lambda)
+* TTL (Time To Live)
+* Integração com AWS Lambda, API Gateway, Cognito, etc.
+* Padrões de modelagem (single-table design, adjacency lists, etc.)
+
+---
+
+No **DynamoDB**, **você não define um schema tradicional como em bancos relacionais**. Ou seja:
+
+* ❌ Você **não define colunas fixas**.
+* ✅ Você **define apenas a chave primária** (obrigatória).
+* ✅ Os **demais atributos são livres** — cada item pode ter atributos diferentes.
+
+---
+
+### 🧱 "Schema" no DynamoDB = estrutura mínima exigida:
+
+Quando você cria uma tabela, só precisa definir:
+
+#### 1. **Partition Key** (obrigatória)
+
+* Também chamada de **hash key**.
+* É o identificador principal do item.
+* Todos os itens devem ter esse atributo.
+
+#### 2. **Sort Key** (opcional)
+
+* Também chamada de **range key**.
+* Permite armazenar vários itens com a mesma Partition Key, diferenciando-os por esse segundo valor.
+
+---
+
+### 📌 Exemplo prático:
+
+Vamos criar uma tabela chamada `Usuarios`:
+
+```plaintext
+Tabela: Usuarios
+Partition Key: email (String)
+Sort Key: data_criacao (String) ← opcional
+```
+
+Agora, você pode inserir itens assim:
+
+```json
+{
+  "email": "lucas@example.com",
+  "data_criacao": "2025-05-30T10:00:00Z",
+  "nome": "Lucas",
+  "idade": 34,
+  "cidade": "Bento Gonçalves"
+}
+```
+
+Ou assim:
+
+```json
+{
+  "email": "joana@example.com",
+  "data_criacao": "2025-05-29T09:00:00Z",
+  "apelido": "Jô",
+  "preferencias": ["dark mode", "email semanal"]
+}
+```
+
+📌 Note que os dois itens têm apenas as chaves obrigatórias em comum — os outros atributos são diferentes.
 
 
+### 📚 Em resumo:
+
+| Parte                        | Schema                                         |
+| ---------------------------- | ---------------------------------------------- |
+| Chave primária (obrigatória) | ✅ Definida no início                           |
+| Outros atributos             | ❌ Livres (flexíveis)                           |
+| Tipos de dados               | 🔢 Dinâmicos (string, number, list, map, etc.) |
+
+---
+
+Se quiser, posso te ajudar a modelar uma tabela DynamoDB com base em um caso real do teu dia a dia. Quer tentar?
