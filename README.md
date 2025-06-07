@@ -1296,3 +1296,12 @@ Não há **diferença entre `.yml` e `.yaml`** — são apenas **duas extensões
 
   * Docker aceita `.yml`
   * GitHub Actions usa `.yaml`
+
+**M\&A** significa **Mergers and Acquisitions**, que em português é **Fusões e Aquisições**.
+
+É um termo usado no mundo dos negócios para descrever:
+
+* **Fusão (Merger)**: quando duas empresas se unem para formar uma nova empresa. Exemplo: se a empresa A e a empresa B se fundem para formar a empresa C.
+* **Aquisição (Acquisition)**: quando uma empresa compra outra. Exemplo: a empresa A compra a empresa B, que deixa de existir como entidade independente ou passa a operar sob controle da empresa A.
+
+Essas operações são comuns em estratégias de crescimento, entrada em novos mercados, ganho de eficiência ou eliminação de concorrência.
