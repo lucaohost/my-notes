@@ -1305,3 +1305,49 @@ Não há **diferença entre `.yml` e `.yaml`** — são apenas **duas extensões
 * **Aquisição (Acquisition)**: quando uma empresa compra outra. Exemplo: a empresa A compra a empresa B, que deixa de existir como entidade independente ou passa a operar sob controle da empresa A.
 
 Essas operações são comuns em estratégias de crescimento, entrada em novos mercados, ganho de eficiência ou eliminação de concorrência.
+
+Claro! Vamos comparar a **quantidade de cafeína** e os **efeitos** típicos do **café de cafeteira**, **chá mate** e **chá verde**:
+
+---
+
+### ☕ Quantidade média de cafeína (por 200 ml)
+
+| Bebida                 | Cafeína (mg) |
+| ---------------------- | ------------ |
+| Café coado (cafeteira) | 80 a 120 mg  |
+| Chá mate               | 30 a 60 mg   |
+| Chá verde              | 20 a 45 mg   |
+
+---
+
+### ⚡ Efeitos da cafeína em cada bebida
+
+#### **1. Café de cafeteira**
+
+* **Absorção rápida**: a cafeína do café é absorvida rapidamente pelo corpo, com picos entre 30 a 60 minutos.
+* **Estímulo forte e rápido**: aumenta o estado de alerta, foco e energia de forma mais intensa.
+* **Possível nervosismo**: pode causar ansiedade, taquicardia ou agitação em pessoas mais sensíveis.
+
+#### **2. Chá mate**
+
+* **Estímulo moderado**: oferece uma energia mais equilibrada, com menor risco de nervosismo.
+* **Mais duradouro que o café**: o efeito estimulante tende a durar mais tempo, mesmo sendo menos intenso.
+* **Contém teobromina** (também presente no chocolate), que promove bem-estar e melhora o humor.
+
+#### **3. Chá verde**
+
+* **Estímulo suave e sustentado**: a cafeína é liberada de forma mais lenta devido à presença de **L-teanina**, um aminoácido que promove relaxamento.
+* **Menor impacto cardiovascular**: a L-teanina também reduz os picos de ansiedade que podem ocorrer com o café.
+* **Foco com calma**: ideal para quem busca concentração sem agitação.
+
+---
+
+### 🧠 Resumo dos efeitos
+
+| Bebida    | Intensidade do estímulo | Duração do efeito | Risco de ansiedade |
+| --------- | ----------------------- | ----------------- | ------------------ |
+| Café      | Alta                    | Curta a média     | Alto               |
+| Chá mate  | Média                   | Média             | Médio              |
+| Chá verde | Baixa a média           | Longa             | Baixo              |
+
+---
