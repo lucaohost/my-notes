@@ -1351,3 +1351,74 @@ Claro! Vamos comparar a **quantidade de cafeína** e os **efeitos** típicos do 
 | Chá verde | Baixa a média           | Longa             | Baixo              |
 
 ---
+
+Perfeito, Lucas. Se o **chá verde é leve demais**, mas você **não quer sofrer com ansiedade ou insônia**, há alternativas interessantes que equilibram **estímulo e tolerabilidade**. Aqui vão opções com efeitos mais suaves que o café, mas mais potentes que o chá verde:
+
+---
+
+### 🌿 **1. Guaraná em pó (natural)**
+
+* **Cafeína natural** mais concentrada, mas com **absorção mais lenta** do que o café.
+* **Efeito energizante constante**, bom para foco e energia física/mental.
+* Duração: **4 a 6 horas**, com menor pico que o café.
+* **Como usar**: 1 a 2g em água, suco ou shake. Evite à noite.
+
+> ✅ Ótima opção para substituir o café sem pico de ansiedade.
+> ⚠️ Só cuidado com marcas com açúcar ou estimulantes artificiais.
+
+---
+
+### 🌿 **2. L-teanina + cafeína (em cápsulas ou pó)**
+
+* Combinação ideal para **foco com calma**. Muito usada por programadores, gamers e pessoas com TDAH.
+* A **L-teanina** elimina quase completamente o risco de ansiedade da cafeína.
+* Dose comum: **100 mg de cafeína + 200 mg de L-teanina**.
+
+> ✅ Efeito limpo e focado por 4 a 6 horas.
+> ✅ Não atrapalha o sono se tomado até 6h antes de dormir.
+
+---
+
+### 🌿 **3. Rhodiola rosea (adaptógeno)**
+
+* Planta adaptógena que **melhora a resistência mental ao estresse e à fadiga**.
+* Não contém cafeína.
+* Ideal para **trabalhos mentais longos** e cansaço crônico.
+* Efeitos sentidos em 30 min a 1h, com pico mais sutil.
+
+> ✅ Aumenta a clareza mental e a energia sem agitação.
+> ⚠️ Melhor tomar pela manhã. Evite tomar muito tarde.
+
+---
+
+### 🌿 **4. Yerba mate (versão tradicional argentina/uruguaia)**
+
+* Mais potente que o chá mate industrial brasileiro.
+* Rica em cafeína, teobromina e antioxidantes.
+* **Estímulo longo, constante e sociável** (tomado em pequenas doses ao longo do tempo).
+
+> ✅ Ideal para foco em sessões longas de estudo/trabalho.
+> ⚠️ Pode causar insônia se tomada muito tarde, apesar de mais suave que o café.
+
+---
+
+### 🌿 **5. Ginseng (Panax ginseng ou americano)**
+
+* Estimulante natural do sistema nervoso central.
+* Melhora o foco, a energia mental e a disposição física.
+* Efeito cumulativo com o uso diário por 1–2 semanas.
+
+> ✅ Baixo risco de ansiedade.
+> ⚠️ Evitar tomar à noite.
+
+---
+
+### 🌟 BÔNUS: Misturas pré-prontas que funcionam
+
+* **Noopept + L-teanina** (nootrópico leve, melhora memória e foco).
+* **Chás funcionais com adaptógenos** (ex: chá com ginseng, guaraná e hortelã).
+* **Suplementos como Mind Lab Pro ou Qualia Mind** (mais caros, mas completos).
+
+---
+
+Se quiser, posso te sugerir uma rotina ideal com horário e dose dependendo do seu dia (estudo, trabalho, treino, etc.). Quer?
